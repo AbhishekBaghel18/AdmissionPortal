@@ -1,0 +1,706 @@
+var mongoose=require('mongoose');
+var Schema= mongoose.Schema();
+//create letsenrol schema and model
+var Portal_Schema= new mongoose.Schema({
+	college_id:{
+		type:Number,require:true,unique:true
+	},
+	college_name:{
+		type:String,require:true
+	},
+	college_state:{
+		type:String,require:true
+	},
+	college_city:{
+		type:String,require:true
+	},
+	college_city_id:{
+		type:Number,require:true
+	},
+	college_state_id:{
+		type:Number,require:true
+	},
+	college_estb_year:{
+		type:Number,require:true
+	},
+	college_campus_area:{
+		type:String,require:true
+	},
+	college_type:{
+		type:String,require:true
+	},
+	college_nacc:{
+		type:String
+	},
+	college_nba:{
+		type:String
+	},
+	college_logo:{
+		type:String,require:true
+	},
+	college_profile:{
+		type:String,require:true
+	},
+	ispartner:{
+		type:Boolean
+	},
+	isform:{
+		type:Boolean
+	},
+	college_about:{
+		type:String,require:true
+	},
+	sellingprice:{
+		type:Number
+	},
+	actualprice:{
+		type:Number
+	},
+	college_contact_person:{
+		type:String
+	},
+	college_address_1:{
+		type:String,require:true
+	},
+	college_address_2:{
+		type:String
+	},
+	college_pincode:{
+		type:String,require:true
+	},
+	college_email_1:{
+		type:String,require:true
+	},
+	college_email_2:{
+		type:String
+	},
+	college_email_3:{
+		type:String
+	},
+	college_email_4:{
+		type:String
+	},
+	college_fax:{
+		type:String
+	},
+	college_website:{
+		type:String,require:true
+	},
+	college_website_2:{
+		type:String
+	},
+	college_phone_1:{
+		type:String,require:true
+	},
+	college_phone_2:{
+		type:String
+	},
+	college_phone_4:{
+		type:String
+	},
+	college_phone_3:{
+		type:String
+	},
+	college_distance_from_bus_stand:{
+		type:String
+	},
+	college_distance_from_airport:{
+		type:String
+	},
+	college_nearest_bus_stand:{
+		type:String
+	},
+	college_nearest_railway_station:{
+		type:String
+	},
+	college_min_package:{
+		type:String
+	},
+	college_avg_package:{
+		type:String
+	},
+	college_max_package:{
+		type:String
+	},
+	college_hotel_fee:{
+		type:String
+	},
+	college_other_fee:{
+		type:String
+	},
+	college_short_name:{
+		type:String
+	},
+	college_mobile_1:{
+		type:Number
+	},
+	college_mobile_2:{
+		type:Number
+	},
+	college_mobile_3:{
+		type:Number
+	},
+	college_mobile_4:{
+		type:Number
+	},
+	college_mobile_5:{
+		type:Number
+	},
+	college_mobile_6:{
+		type:Number
+	},
+	college_mobile_7:{
+		type:Number
+	},
+	college_mobile_8:{
+		type:Number
+	},
+	college_mobile_9:{
+		type:Number
+	},
+	college_mobile_10:{
+		type:Number
+	},
+	college_toll_free:{
+		type:Number
+	},
+	college_toll_free_2:{
+		type:Number
+	},
+	college_dress_code:{
+		type:String
+	},
+	slug:{
+		type:String
+	},
+	collegecourses:
+	[
+	{
+		priority:{
+			type:Number
+		},
+		id:{
+			type:Number
+		},
+		fee:{
+			type:String
+		},
+		ofee:{
+			type:String
+		},
+		gdinterview:{
+			type:String
+		},
+		approval:{
+			type:String
+		},
+		duration:{
+			type:String
+		},
+		coursename:{
+			type:String
+		},
+		eligibilty:{
+			type:String
+		},
+		coursetype:{
+			type:String
+		},
+		quota:{
+			type:String
+		},
+		seats:{
+			type:String
+		},
+		aff:{
+			type:String
+		},
+		miscdetails:{
+			type:String
+		},
+		branches:[{
+			branchname:{
+				type:String
+			},
+			branchfee:{
+			type:String
+		    },
+		   id:{
+			type:Number
+		    },
+		},
+		{
+			branchname:{
+				type:String
+			},
+			branchfee:{
+			type:String
+		    },
+		   id:{
+			type:Number
+		    },
+		},
+		{
+			branchname:{
+				type:String
+			},
+			branchfee:{
+			type:String
+		    },
+		   id:{
+			type:Number
+		    },
+		},
+		{
+			branchname:{
+				type:String
+			},
+			branchfee:{
+			type:String
+		    },
+		   id:{
+			type:Number
+		    },
+		},
+		{
+			branchname:{
+				type:String
+			},
+			branchfee:{
+			type:String
+		    },
+		   id:{
+			type:Number
+		    },
+		},
+		{
+			branchname:{
+				type:String
+			},
+			branchfee:{
+			type:String
+		    },
+		   id:{
+			type:Number
+		    },
+		},
+		{
+			branchname:{
+				type:String
+			},
+			branchfee:{
+			type:String
+		    },
+		   id:{
+			type:Number
+		    },
+		},
+		{
+			branchname:{
+				type:String
+			},
+			branchfee:{
+			type:String
+		    },
+		   id:{
+			type:Number
+		    },
+		}
+		],
+		exams:[
+		{
+			examname:{
+				type:String
+			}
+
+		}]
+	},
+	{
+		priority:{
+			type:Number
+		},
+		id:{
+			type:Number
+		},
+		fee:{
+			type:String
+		},
+		ofee:{
+			type:String
+		},
+		gdinterview:{
+			type:String
+		},
+		approval:{
+			type:String
+		},
+		duration:{
+			type:String
+		},
+		coursename:{
+			type:String
+		},
+		eligibilty:{
+			type:String
+		},
+		coursetype:{
+			type:String
+		},
+		quota:{
+			type:String
+		},
+		seats:{
+			type:String
+		},
+		aff:{
+			type:String
+		},
+		miscdetails:{
+			type:String
+		},
+		branches:[],
+		exams:[{
+			examname:{
+				type:String
+			}
+			
+		}]
+	},
+	{
+		priority:{
+			type:Number
+		},
+		id:{
+			type:Number
+		},
+		fee:{
+			type:String
+		},
+		ofee:{
+			type:String
+		},
+		gdinterview:{
+			type:String
+		},
+		approval:{
+			type:String
+		},
+		duration:{
+			type:String
+		},
+		coursename:{
+			type:String
+		},
+		eligibilty:{
+			type:String
+		},
+		coursetype:{
+			type:String
+		},
+		quota:{
+			type:String
+		},
+		seats:{
+			type:String
+		},
+		aff:{
+			type:String
+		},
+		miscdetails:{
+			type:String
+		},
+		branches:[],
+		exams:[{
+			examname:{
+				type:String
+			}
+			
+		}]
+	}
+],
+collegefacilities:[{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+},
+{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+},{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+},{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+},{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+},{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+},{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+},{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+},{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+},{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+},{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+},{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+},{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+},
+{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+},
+{
+	facility:{
+		type:String
+	},
+	facilityimage:{
+		type:String
+	},
+}
+],
+collegeplacement:[
+{
+	companyname:{
+		type:String
+	},
+	companylogo:{
+		type:String
+	}
+
+},
+{
+	companyname:{
+		type:String
+	},
+	companylogo:{
+		type:String
+	}
+
+},{
+	companyname:{
+		type:String
+	},
+	companylogo:{
+		type:String
+	}
+
+},{
+	companyname:{
+		type:String
+	},
+	companylogo:{
+		type:String
+	}
+
+},{
+	companyname:{
+		type:String
+	},
+	companylogo:{
+		type:String
+	}
+
+},{
+	companyname:{
+		type:String
+	},
+	companylogo:{
+		type:String
+	}
+
+},{
+	companyname:{
+		type:String
+	},
+	companylogo:{
+		type:String
+	}
+
+},{
+	companyname:{
+		type:String
+	},
+	companylogo:{
+		type:String
+	}
+
+},{
+	companyname:{
+		type:String
+	},
+	companylogo:{
+		type:String
+	}
+
+},{
+	companyname:{
+		type:String
+	},
+	companylogo:{
+		type:String
+	}
+
+},{
+	companyname:{
+		type:String
+	},
+	companylogo:{
+		type:String
+	}
+
+},{
+	companyname:{
+		type:String
+	},
+	companylogo:{
+		type:String
+	}
+
+},{
+	companyname:{
+		type:String
+	},
+	companylogo:{
+		type:String
+	}
+
+}
+],
+collegekeypeople:[],
+collegefaculty:[],
+images:[
+{
+	url:{
+		type:String
+	},
+	url:{
+		type:String
+	},url:{
+		type:String
+	},url:{
+		type:String
+	}
+}],
+videos:[{
+	url:{
+		type:String
+	},
+	url:{
+		type:String
+	},url:{
+		type:String
+	},url:{
+		type:String
+	}
+}],
+placementkeypoint:[],
+brochures:[
+{
+	name:{
+		type:String
+	},
+	filetype:{
+		type:String
+	},
+	id:{
+		type:Number
+	},
+	dllink:{
+		type:String
+	}
+}],
+group:[{
+	id:{
+		type:Number
+	},
+	collegename:{
+		type:String
+	},
+	city:{
+		type:String
+	},
+	slug:{
+		type:String
+	},
+	logo:{
+		type:String
+	}
+
+}],
+collegekeypoints:[],
+
+collegeadditionalddress:[]
+});
+
+var Portal=mongoose.model('Collegedetails',Portal_Schema);
+module.exports=Portal;

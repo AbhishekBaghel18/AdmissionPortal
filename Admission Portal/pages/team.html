@@ -1,0 +1,29 @@
+<div class="jumbotron jumbotron-sm" style="margin-top: -20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h1 class="h1">Team </h1>
+                <h5>We're Enterpreneurs | We're Students | We're Smart</h5>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6" ng-repeat="teampic in teampics">
+			<img ng-src="{{teampic.image}}" class="img-responsive">
+			<div class="info">
+				<h1 style="color: #55CBD2;"> {{teampic.name}} </h1>
+				<p> {{teampic.desc}} </p>
+				 <div class="wrapper">
+					<ul class="social-icons icon-circle icon-zoom list-unstyled list-inline"> 
+					<li> <a href="{{teampic.fb}}"><i class="fa fa-facebook"></i></a></li> 
+					<li> <a href="{{teampic.ln}}"><i class="fa fa-linkedin"></i></a></li> 
+					<li> <a href="{{teampic.eid}}"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
